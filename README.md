@@ -24,5 +24,5 @@
 <br>
 
 **What's this**:
-- Create a **HTTP handler function** with knowledge of URL shortener/redirect in map format with a default fallback mux
-- Then, there's also knowledge in YAML format and has its own HTTP handler function that fallback to the above map handler function
+- Parse JSON from file `gopher.json`
+- Server HTTP and define html page with template
