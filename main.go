@@ -11,6 +11,7 @@ import (
 	"strings"
 )
 
+// JSONStruct stores the import JSON from the JSON file (default: gopher.json)
 type JsonStruct struct {
 	Title   string
 	Story   []string
@@ -27,11 +28,8 @@ const (
 )
 
 func main() {
-	// Create map to store JSON data
-	jsonData := make(map[string]JsonStruct)
-
 	// Load JSON from file
-	err := LoadJSONFromFile(jsonData)
+	jsonData, err := loadJSONFromFile()
 	if err != nil {
 		fmt.Println(err)
 		return
@@ -44,11 +42,14 @@ func main() {
 	_ = http.ListenAndServe(":8080", nil)
 }
 
-func LoadJSONFromFile(jsonData map[string]JsonStruct) error {
+func loadJSONFromFile() (map[string]JsonStruct, error) {
+	// Create map to store JSON data
+	jsonData := make(map[string]JsonStruct)
+
 	// Open file
 	jsonFile, err := os.Open(JSONFileName)
 	if err != nil {
-		return errors.New("error: file not found: " + JSONFileName)
+		return nil, errors.New("error: file not found: " + JSONFileName)
 	}
 
 	// Read JSON data
@@ -58,11 +59,11 @@ func LoadJSONFromFile(jsonData map[string]JsonStruct) error {
 		err = jsDecoder.Decode(&jsonData)
 
 		if err != nil {
-			return errors.New("error: Can't decode json: " + err.Error())
+			return nil, errors.New("error: Can't decode json: " + err.Error())
 		}
 	}
 
-	return nil
+	return jsonData, nil
 }
 
 func handleLoad(jsonData map[string]JsonStruct) http.HandlerFunc {

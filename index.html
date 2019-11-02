@@ -9,7 +9,7 @@
         <title>{{.Title}}</title>
     </head>
     <body>
-        <div class="card text-center">
+        <div class="card text-center" style="margin-top: 10vh; margin-left: 5%; margin-right: 5%">
             <div class="card-header">
 
                 <h5 class="card-title">{{.Title}}</h5>
@@ -21,7 +21,7 @@
             </ul>
         </div>
 
-        <nav aria-label="Page navigation example">
+        <nav aria-label="Story navigation" style="margin-top: 1%; margin-left: 5%; margin-right: 5%">
             <ul class="pagination justify-content-center">
                 {{range $key, $value := .Options}}
                     <li class="page-item"><a class="btn btn-primary page-link" href="{{$value.Arc}}">{{$value.Text}}</a>

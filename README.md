@@ -10,7 +10,7 @@
 ![GitHub last commit](https://img.shields.io/github/last-commit/ttimt/ChooseYourOwnAdventure-gophercises?style=for-the-badge)
 
 [![Ask Me Anything !](https://img.shields.io/badge/Ask%20me-anything-1abc9c.svg)](https://linkedin.com/in/timothy0707/)
-[![Build status](https://ci.appveyor.com/api/projects/status/nwp6kndiutllfh5c/branch/master?svg=true)](https://ci.appveyor.com/project/ttimt/urlshort-gophercises/branch/master)
+[![Build status](https://ci.appveyor.com/api/projects/status/nwp6kndiutllfh5c/branch/master?svg=true)](https://ci.appveyor.com/project/ttimt/ChooseYourOwnAdventure-gophercises/branch/master)
 ![GitHub top language](https://img.shields.io/github/languages/top/ttimt/ChooseYourOwnAdventure-gophercises)
 [![Go Report Card](https://goreportcard.com/badge/github.com/ttimt/ChooseYourOwnAdventure-gophercises)](https://goreportcard.com/report/github.com/ttimt/ChooseYourOwnAdventure-gophercises)
 ![GitHub repo size](https://img.shields.io/github/repo-size/ttimt/ChooseYourOwnAdventure-gophercises)
